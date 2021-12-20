@@ -11,6 +11,7 @@ specifiers:
   '@vue/server-renderer': ^3.2.26
   '@vueuse/core': ^7.3.0
   '@vueuse/head': ^0.7.4
+  axios: ^0.24.0
   critters: ^0.0.15
   cross-env: ^7.0.3
   cypress: ^9.1.1
@@ -44,6 +45,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 7.3.0_vue@3.2.26
   '@vueuse/head': 0.7.4_vue@3.2.26
+  axios: 0.24.0
   nprogress: 0.2.0
   pinia: 2.0.6_typescript@4.5.4+vue@3.2.26
   prism-theme-vars: 0.2.2
@@ -1420,8 +1422,8 @@ packages:
       '@iconify/types': 1.0.12
     dev: true
 
-  /@intlify/bundle-utils/2.1.0_vue-i18n@9.1.9:
-    resolution: {integrity: sha512-ogvmAjbSq0su4ijQbwqRfb0yimizZSK+HHV0SF3XCHSCtL+PDdRIDkkeNpNdPxNmdahORHXknC06Umehz4nTnQ==}
+  /@intlify/bundle-utils/2.2.0_vue-i18n@9.1.9:
+    resolution: {integrity: sha512-qVuN7+c84UB6rlLHSued2J9R86LG1rHg6ZibCghGMyPXnW0nOuIfkUFf1F7tXIqfMXjIPeJzlbpmzjWTI2z9Kw==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1513,7 +1515,7 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 2.1.0_vue-i18n@9.1.9
+      '@intlify/bundle-utils': 2.2.0_vue-i18n@9.1.9
       '@intlify/shared': 9.2.0-beta.23
       '@rollup/pluginutils': 4.1.1
       debug: 4.3.2
@@ -2315,6 +2317,14 @@ packages:
   /aws4/1.11.0:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
+
+  /axios/0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+    dependencies:
+      follow-redirects: 1.14.6
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /babel-plugin-dynamic-import-node/2.3.3:
     resolution: {integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==}
@@ -3961,6 +3971,16 @@ packages:
   /flatted/3.2.2:
     resolution: {integrity: sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==}
     dev: true
+
+  /follow-redirects/1.14.6:
+    resolution: {integrity: sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}

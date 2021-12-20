@@ -1,0 +1,13 @@
+import axios from 'axios'
+import type { AxiosRequestConfig, AxiosResponse } from 'axios'
+
+export const request = async(options: AxiosRequestConfig): Promise<AxiosResponse> => {
+  options.baseURL = 'https://testingapi.alaskaerp.com/'
+  options.headers = {
+    CompanyDatabase: 'testing',
+    Authorization:
+      'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2ZjUwNmY3My1jMGM1LTQ0OGYtOTQ4My1kNjc2ZWZmZWYwZTYiLCJqdGkiOiIwN2E4ZjkzNGI2ZWQzNmFmMWFlY2Q5YzMyZThiM2Y1NzM5MTJhYTBlYTVjNTc5MTA5OWQ2NTQ2ZGFjNzZhMGU5ZDkwYmQ3Yzc3OWQ1YjAxNyIsImlhdCI6MTYzOTgwOTQ2MywibmJmIjoxNjM5ODA5NDYzLCJleHAiOjE2NzEzNDU0NjMsInN1YiI6IjRjOTk4ZTBjLTExYWEtNDFlNC1iOTEwLTg3YmEyZDYyMGIxOCIsInNjb3BlcyI6W119.RJCHOIr2rqTA9gZGJkVw2TrWr-l0mqoR4dEtNhjHjxRkMk3SLG2h6_AkHth9QyAg32c5FU6LU9zsaKf3QQcpPLNTCvhsizuXS6e-42lfJ_K2rZ4OgcI-RBCLnat1LpBOKcBi3FWHLA5fQBHIozxWwts-mhMjTqOwNZLjqDBZSmlCqQUgy1xBKIqth3A42n2V5URZ08lw1z5mGl93n80N6cu6EdbE-3YmXoYKFhOyUFFi_ULvDoaVMpwCp3UxHldmJ666-hqE_rd9k0JR4LOGD5BtefFDvYSRCkGkEAoEBdh5c0aFYrwOE_EAwAgvD-XjWqernSTBGdJlIYWrnylS-nt8WWiUFh0PsfwXf5OKLz0lm1q9l7t1LqSmDjYPBoqBni-IwMaBNnXDW_CAKZlUs-lKNIEulc83n65IU9bXL1AlOgyza9pqIKRivzCE8ffZpXRDM_7z8FQBi2SwHF8g-DJp5P8v8kuBISQtBO9rTFUWY0vmQVx3ZUSBDZjbFvdQ3APbQUmXu3BGo--maAunNekFXj7IbxifYwFNTk-tzr0xfv4N45dNurEb_aYOMsNcAGf0qQ9wWORkRPLjuTL2ftIXQruEoyWIEgKyR3ibtJlquVECuumchiB7pa4XVI3WaBZ7tRP9wkELskDNkcYS4hz4Z_EFvYkP2SfLzgqTt24',
+  }
+  const response = await axios.request(options)
+  return response
+}
